@@ -1,39 +1,100 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="facebook-domain-verification" content="hwto09oq7kkt6o3iqexmeql5d1bmx5" />
-    <title>Soraia - INVERNAC & CIA S.A.S.</title>
+    <title>Soraia - Sitio Oficial</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; text-align: center; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        img.logo { max-width: 200px; height: auto; margin-bottom: 20px; }
-        .info { text-align: left; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px; }
-        .info p { line-height: 1.6; }
-        .footer { margin-top: 40px; font-size: 0.9em; color: #777; }
+        :root {
+            --primary-color: #d8b4a0; /* Rose gold / nude tone matching the logo */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #faf9f8;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--text-dark); background-color: var(--white); line-height: 1.6; }
+        
+        /* Navbar */
+        header { padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo-container img { height: 60px; width: auto; object-fit: contain; }
+        nav a { margin-left: 30px; text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.95rem; transition: color 0.3s ease; }
+        nav a:hover { color: var(--primary-color); }
+        
+        /* Hero Section */
+        .hero { position: relative; width: 100%; height: 70vh; background-image: url('WhatsApp Image 2026-09-29 at 3.26.36 PM.jpeg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.4); z-index: 1; }
+        .hero-content { position: relative; z-index: 2; background: rgba(255, 255, 255, 0.9); padding: 50px; border-radius: 4px; max-width: 600px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .hero-content h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 300; letter-spacing: 2px; color: var(--text-dark); }
+        .hero-content p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px; }
+        
+        /* Contact / Info Section */
+        .contact-section { padding: 80px 10%; background-color: var(--bg-light); text-align: center; }
+        .contact-section h2 { font-size: 2rem; margin-bottom: 40px; font-weight: 300; letter-spacing: 1px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto; }
+        .info-card { background: var(--white); padding: 30px; border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .info-card h3 { font-size: 1.1rem; margin-bottom: 15px; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px; }
+        .info-card p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 8px; }
+        .info-card a { color: var(--text-dark); text-decoration: none; font-weight: bold; }
+        .info-card a:hover { color: var(--primary-color); }
+        
+        /* Footer */
+        footer { background-color: var(--text-dark); color: var(--white); padding: 40px 10%; text-align: center; font-size: 0.85rem; }
+        .footer-legal { margin-top: 20px; opacity: 0.7; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="WhatsApp Image 2026-09-29 at 3.26.36 PM (1).jpeg" alt="Soraia Logo" class="logo">
-        <h1>Soraia</h1>
-        <p>Sitio web oficial en construcción.</p>
-        
-        <div class="info">
-            <h2>Información Corporativa</h2>
-            <p><strong>Razón Social:</strong> INVERNAC & CIA S.A.S.</p>
-            <p><strong>NIT:</strong> 800242482-7</p>
-            <p><strong>Dirección:</strong> Calle 75 # 5-59</p>
-            <p><strong>Ciudad:</strong> Cali - Valle, Colombia</p>
-            <p><strong>Teléfono:</strong> 3044171281</p>
-            <p><strong>Correo:</strong> <a href="mailto:talentohumano@soraia.site">talentohumano@soraia.site</a></p>
-            <p><strong>Dominio:</strong> soraia.site</p>
+
+    <header>
+        <div class="logo-container">
+            <img src="WhatsApp Image 2026-09-29 at 3.26.36 PM (1).jpeg" alt="Soraia Logo">
         </div>
-        
-        <div class="footer">
-            &copy; 2026 INVERNAC & CIA S.A.S. Todos los derechos reservados.
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Elegancia y Estilo</h1>
+            <p>Descubre la esencia de Soraia. Próximamente nuestro catálogo completo estará disponible.</p>
         </div>
-    </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <h2>Atención al Cliente</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Contacto</h3>
+                <p>Teléfono: <strong>3044171281</strong></p>
+                <p>Correo: <a href="mailto:talentohumano@soraia.site">talentohumano@soraia.site</a></p>
+            </div>
+            <div class="info-card">
+                <h3>Ubicación</h3>
+                <p>Calle 75 # 5-59</p>
+                <p>Cali, Valle del Cauca</p>
+                <p>Colombia</p>
+            </div>
+            <div class="info-card">
+                <h3>Información Legal</h3>
+                <p><strong>INVERNAC & CIA S.A.S.</strong></p>
+                <p>NIT: <strong>800242482-7</strong></p>
+                <p>Dominio Oficial: soraia.site</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="WhatsApp Image 2026-09-29 at 3.26.36 PM (1).jpeg" alt="Soraia" style="height: 40px; filter: brightness(0) invert(1); margin-bottom: 15px;">
+            <p>&copy; 2026 INVERNAC & CIA S.A.S. - Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-legal">
+            <p>Razón Social: INVERNAC & CIA S.A.S. | NIT: 800242482-7 | Calle 75 # 5-59, Cali - Valle | Tel: 3044171281</p>
+        </div>
+    </footer>
+
 </body>
 </html>
